@@ -1,4 +1,4 @@
-#LV X-Technologien II, SoSe 2022
+# LV X-Technologien II, SoSe 2022
 Übung zu CETEIcean
 
 ## Getting Started with CETEIcean
