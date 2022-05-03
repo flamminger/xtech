@@ -8,10 +8,33 @@
   <script src="js/CETEI.js"></script>
   <script>
     let c = new CETEI();
-    c.getHTML5('fpn-washington.xml', function(data) {
+    c.getHTML5('hamlet.xml', function(data) {
       document.getElementsByTagName("body")[0].appendChild(data);
     });
+
+    let behaviors = {
+      "tei": {
+        //head zu <h>
+        "head": function(e) {
+          let level = document.evaluate("count(ancestor::tei-div)", e, null, XPathResult.NUMBER_TYPE, null);
+          let result = document.createElement("h" + level.numberValue);
+          for (let n of Array.from(e.childNodes)) {
+            result.appendChild(n.cloneNode());
+          }
+          return result;
+        },
+        "lb": ["<br>"],
+        //"teiHeader": null,
+
+
+      }
+    };
+    c.addBehaviors(behaviors);
+
+
+
   </script>
+
 </head>
 <body>
 

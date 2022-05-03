@@ -1,5 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500&family=Montserrat:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  color: rgba(26, 26, 26, .7);
+}
+
+html,
+body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  line-height: 2;
+}
+
 tei-div {
   display: block;
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 tei-p {
   display: block;
@@ -12,14 +30,65 @@ tei-list[type=simple] {
 }
 
 tei-list[type=simple]>tei-item {
-    display: list-item;
-  }
+  display: list-item;
+}
 
-  tei-hi[rend=italics] {
-    font-style: italic;
-  }
-/* Beginn in neuer Zeile:*/
+tei-stage {
+  font-weight: bolder;
+  line-height: 1;
+
+}
+
+tei-stage:before {
+  content:"\a";
+  white-space: pre;
+}
+
+tei-stage:after {
+  content:"\a";
+  white-space: pre;
+}
+
+
+tei-hi[rend=italics] {
+  font-style: italic;
+}
+/* Beginn in neuer Zeile:
 tei-lb:before{
   white-space:pre;
   content: "\A"
+}
+*/
+h3 {
+  font-weight: 700;
+}
+
+
+tei-l:after {
+  content:"\a";
+  white-space: pre;
+}
+
+tei.label {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+tei.supplied {
+  vertical-align: super;
+  font-size: 0.5em;
+}
+tei-speaker {
+  font-style: italic;
+  font-weight: bolder;
+}
+
+tei-speaker:before {
+  content:"\a";
+  white-space: pre;
+
+}
+
+h1 {
+  text-align: center;
 }
