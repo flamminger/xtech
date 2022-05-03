@@ -1,4 +1,7 @@
-# Getting Started with CETEIcean
+#LV X-Technologien II, SoSe 2022
+Übung zu CETEIcean
+
+## Getting Started with CETEIcean
 
 This tutorial will walk you through the steps to publish a TEI file online using CETEIcean. We will start with a simple (though quite large) file in TEI P5 form, `fpn-washington.xml`, which we want to display in a web browser.
 
