@@ -1,2 +1,2 @@
-# xtech
-LV X-Technologien II, SoSe22
+# VU X-Technologien II
+####LV X-Technologien II, SoSe22
