@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- https://burckhardtsource.org/letter/785?semantic -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>From: Grohe, Melchior To: Burckhardt, Jacob, Mannheim 1864</title>
+            <author ref="groheM">Grohe, Melchior</author>
+            <editor>VU Digitale Edition</editor>
+            <respStmt>
+               <resp>Kodierung</resp>
+               <name>Florian Lamminger</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>nur für LV Digitale Edition bestimmt</p>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <publisher>EUROCORR</publisher>
+               <publisher ref="http://viaf.org/viaf/51747899">Ghelardi, Maurizio</publisher>
+               <!-- Hier Titel nach Zitiervorlage vergeben, im titleStmt wurde hingegen die tatsächliche Überschrift verwendet -->
+               <title>Grohe, Melchior, 21st October 1864</title>
+               <pubPlace ref="https://burckhardtsource.org/letter/785"
+                  >https://burckhardtsource.org/letter/785</pubPlace>
+               <edition>http://burckhardtsource.org</edition>
+               <date when="1864-10-21">21. Oktober 1864</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>TEI Kodierungsübung für die LV Digitale Edition</p>
+         </projectDesc>
+      </encodingDesc>
+      <profileDesc>
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#groheM"
+                  ><forename>Melchior</forename><surname>Grohe</surname></persName>
+               <settlement ref="#mannheim">Mannheim</settlement>
+               <date when="1864-10-21">21. Oktober 1864</date>
+            </correspAction>
+            <correspAction type="received">
+               <persName ref="#burckhardtJ"
+                  ><forename>Jacob</forename><surname>Burckhardt</surname></persName>
+               <settlement ref="#basel">Basel</settlement>
+               <date when="1864-10-23"/>
+            </correspAction>
+         </correspDesc>
+         <langUsage>
+            <language ident="de">Deutsch</language>
+         </langUsage>
+         <creation>
+            <placeName ref="#mannheim">Mannheim</placeName>
+            <date when="1864-10-21">21. Oktober 1864</date>
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <standOff>
+      <listPerson>
+         <person>
+            <persName xml:id="groheM"
+               ><forename>Melchior</forename><surname>Grohe</surname></persName>
+            <idno type="VIAF">42600078</idno>
+            <idno type="URI">http://viaf.org/viaf/42600078</idno>
+            <birth when="1829">1829</birth>
+            <death when="1906">1906</death>
+            <occupation ref="http://vocab.getty.edu/aat/300025492">Schriftsteller</occupation>
+         </person>
+         <person xml:id="burckhardtJ">
+            <persName><forename>Jacob</forename><surname>Burckhardt</surname></persName>
+            <idno type="VIAF">51686578</idno>
+            <idno type="URI">http://viaf.org/viaf/51686578</idno>
+            <birth when="1818">1818</birth>
+            <death when="1897">1897</death>
+            <occupation ref="http://vocab.getty.edu/aat/300025539">Historiker</occupation>
+         </person>
+         <person xml:id="einFreund">
+            <persName>ein Freund</persName>
+            <note>unbekannte Person</note>
+            <idno type="VIAF">100627125</idno>
+            <idno type="URI">http://viaf.org/viaf/100627125</idno>
+         </person>
+         <person xml:id="salvatorR">
+            <persName><forename>Rosa</forename><surname>Salvator</surname></persName>
+            <idno type="VIAF">46830369</idno>
+            <idno type="URI">http://viaf.org/viaf/46830369</idno>
+            <birth when="1615">1615</birth>
+            <death when="1673">1673</death>
+            <occupation ref="http://vocab.getty.edu/aat/300025136">Maler</occupation>
+         </person>
+      </listPerson>
+      <listPlace>
+         <place xml:id="basel">
+            <placeName>Basel</placeName>
+            <idno type="VIAF">130173038</idno>
+            <idno type="URI">http://viaf.org/viaf/130173038</idno>
+         </place>
+         <place xml:id="neapel">
+            <placeName>Neapel</placeName>
+            <idno type="VIAF">137842517</idno>
+            <idno type="URI">http://viaf.org/viaf/137842517</idno>
+         </place>
+         <place xml:id="karlsruhe">
+            <placeName>Karlsruhe</placeName>
+            <idno type="VIAF">241322215</idno>
+            <idno type="URI">http://viaf.org/viaf/241322215</idno>
+         </place>
+         <place xml:id="deutschland">
+            <placeName>Deutschland</placeName>
+            <idno type="VIAF">189116956</idno>
+            <idno type="URI">http://viaf.org/viaf/189116956</idno>
+         </place>
+         <place xml:id="italien">
+            <placeName>Italien</placeName>
+            <idno type="VIAF">152361066</idno>
+            <idno type="URI">http://viaf.org/viaf/152361066</idno>
+         </place>
+         <place xml:id="mannheim">
+            <placeName>Mannheim</placeName>
+            <idno type="VIAF">3003150085875315060000</idno>
+            <idno type="URI">http://viaf.org/viaf/3003150085875315060000</idno>
+         </place>
+      </listPlace>
+      <listBibl>
+         <bibl xml:id="kultRenIta">
+            <title>Die Cultur der Renaissance in Italien</title>
+            <author ref="#burckhardtJ">Burckhardt, Jacob</author>
+            <date when="1860">1860</date>
+            <placeName ref="#basel">Basel</placeName>
+            <idno type="VIAF">179087205</idno>
+            <idno type="URI">http://viaf.org/viaf/179087205</idno>
+         </bibl>
+         <bibl xml:id="DicHelIta">
+            <title>Dichter und Helote in Italien</title>
+            <pubPlace ref="#augsAllgZeit">Augsburger Allgemeine Zeitung</pubPlace>
+            <date when="1864-06-01">vom 1 Juni</date>
+            <note>Als Beilage der "Augsburger Allgemeine Zeitung" erschienen</note>
+         </bibl>
+      </listBibl>
+      <listOrg>
+         <org xml:id="augsAllgZeit">
+            <orgName>Augsburger Allgemeine Zeitung</orgName>
+            <idno type="VIAF">152159032518301180368</idno>
+            <idno type="URI">http://viaf.org/viaf/152159032518301180368</idno>
+         </org>
+         <org xml:id="revueGerman">
+            <orgName>Revue germanique</orgName>
+            <idno type="VIAF">185788911</idno>
+            <idno type="URI">http://viaf.org/viaf/185788911</idno>
+         </org>
+      </listOrg>
+      <list>
+         <item xml:id="chariten">
+            <term>Charitinen</term>
+            <gloss>Chariten, Göttinnen der griechischen Mythologie vgl. römischen Grazien</gloss>
+         </item>
+         <item xml:id="courant">
+            <term>au courant</term>
+            <gloss>auf dem Laufenden</gloss>
+         </item>
+         <item xml:id="heroenland">
+            <term>alte Heroenland</term>
+            <gloss>Griechenland</gloss>
+         </item>
+         <item xml:id="epinoes">
+            <term>epinöses</term>
+            <gloss target="https://www.retrobibliothek.de/retrobib/seite.html?id=105114">Epinös
+               (franz., "dornig"), mißlich, schwierig; Epinosität, dornige Beschaffenheit,
+               Mißlichkeit.</gloss>
+         </item>
+      </list>
+   </standOff>
+   <facsimile>
+      <surface xml:id="p1" lry="1598" lrx="1300" uly="0" ulx="0">
+         <graphic
+            url="https://fe.burckhardtsource.org/diplo/letter/785/data/input_data/images/single/p1.jpg"/>
+         <zone xml:id="p1_0" lry="465" lrx="1079" uly="319" ulx="94"/>
+         <zone xml:id="p1_1" lry="1110" lrx="1261" uly="536" ulx="55"/>
+         <zone xml:id="p1_2" lry="1354" lrx="1268" uly="1113" ulx="44"/>
+      </surface>
+      <surface xml:id="p2" lry="1599" lrx="1300" uly="0" ulx="0">
+         <graphic
+            url="https://fe.burckhardtsource.org/diplo/letter/785/data/input_data/images/single/p2.jpg"/>
+         <zone xml:id="p2_1" lry="804" lrx="1263" uly="493" ulx="55"/>
+         <zone xml:id="p2_2" lry="1228" lrx="1270" uly="815" ulx="63"/>
+         <zone xml:id="p2_3" lry="1391" lrx="1276" uly="1239" ulx="61"/>
+      </surface>
+      <surface xml:id="p3" lry="1601" lrx="1300" uly="0" ulx="0">
+         <graphic
+            url="https://fe.burckhardtsource.org/diplo/letter/785/data/input_data/images/single/p3.jpg"/>
+         <zone xml:id="p3_1" lry="1254" lrx="1274" uly="530" ulx="48"/>
+         <zone xml:id="p3_closer_1" lry="1404" lrx="1233" uly="1260" ulx="242"/>
+         <zone xml:id="p3_salute" lry="1478" lrx="1261" uly="1402" ulx="626"/>
+         <zone xml:id="p3_signature" lry="1534" lrx="1207" uly="1476" ulx="905"/>
+         <zone xml:id="p3_adress" lry="1569" lrx="837" uly="1469" ulx="61"/>
+      </surface>
+      <surface xml:id="p4" lry="1583" lrx="1300" uly="0" ulx="0">
+         <graphic
+            url="https://fe.burckhardtsource.org/diplo/letter/785/data/input_data/images/single/p4.jpg"
+         />
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div facs="#p1">
+            <pb/>
+            <opener facs="#p1_0">
+               <salute><rs ref="#burckhardtJ">Hochzuverehrender Herr Professor</rs></salute>
+            </opener>
+            <p facs="#p1_1">als ich neulich auf der Rückreise von <placeName ref="#neapel"
+                  >Neapel</placeName> durch <placeName ref="#basel">Basel</placeName> kam erblickte
+               ich dort unter den Büchern <rs>eines Freundes</rs> Ihre <title ref="kultRenIta"
+                  >«Cultur der Renaissance»</title> ich habe seither das Buch gelesen und als alter
+               graeco- &amp; italomane fühle ich mich gedrungen Ihnen recht innig die Hände zu
+               drücken für den Hochgenuß, den mir die Lektüre bereitet hat.</p>
+            <p facs="p1_2">Gern hätte ich persönlich bei Ihnen vorgesprochen, denn da das Buch so
+               südländisch-gegenwärtig ist – wie muß es erst der Mann sein!</p>
+         </div>
+         <div facs="#p2">
+            <pb/>
+            <p facs="#p2_1">Indessen hat sich meine dießjährige Rückkehr in’s <term>alte
+                  Heroenland</term> etwas fraglich gemacht, und ich wollte die des Dankopfers
+               harrenden <term ref="#chariten">Charitinen</term> nicht länger warten lassen.</p>
+            <p facs="#p2_2">Gern hätte ich mich Ihnen mit meinem neuesten opus «<bibl><title>Dichter
+                     und Helote in Italien</title>» (über «<persName ref="#salvatorR">Salvator
+                     Rosa</persName>» Beilage zur <orgName>Augsb. Allgem. Zeitg</orgName>
+                  <date when="1864-06-01">vom 1 Juni</date>)</bibl> vorgestellt – indessen liegt
+               noch mein Loos im Schooße der Gotter und mein <choice>
+                  <expan>Manuskript</expan>
+                  <abbr>Ms.</abbr>
+               </choice> im Pulte der Buchhändler.</p>
+            <p facs="#p2_3">Noch eine Herzensangelegenheit vorzutragen erlaubt mir Ihre italienische
+               Grazie!</p>
+         </div>
+         <div facs="#p3">
+            <pb/>
+            <p facs="#p3_1">In <placeName ref="#karlsruhe">Carlsruhe</placeName> sind eben
+               italienische politische Emissäre – dafür halt ich sie – die in <placeName
+                  ref="#deutschland">Deutschland</placeName> eine «Rivista Italiana» (à la
+                  <orgName>révue germanique</orgName>») gründen möchten; ein jetzt gewiß äußerst
+                  <term>epinöses</term> Geschäft! Doch haben Sie mir meine alten Lieblingsgedanken
+               zurückgerufen eine "<hi rend="underline">Italia</hi>" zu gründen, das ist eine
+               Monatsschrift um die Deutschen mit den <hi rend="underline">literarisch</hi>-<hi
+                  rend="underline">artistischen</hi> Neuigkeiten <placeName ref="Italien"
+                  >Italiens</placeName>
+               <term>au courant</term> zu halten. Was halten Sie davon, <rs ref="#burckhardtJ"
+                  >lieber Herr Professor</rs>?</p>
+            <closer facs="#p3_closer_1">
+               <salute facs="#p3_salute">Aller Segen und die vollsten Kränze des Eros, des Bacchus
+                  und der Musen!</salute>
+               <salute>Voll hochachtungsvoller Liebe</salute>
+               <signed facs="#p3_signature">
+                  <persName ref="#groheM">Dr. Grohe</persName> adr. <address facs="#p3_adress">
+                     <persName>Madame Phil. Grohe</persName>
+                     <street>C 2, 2</street>
+                     <settlement ref="#mannheim" type="city">Mannheim</settlement>
+                  </address></signed>
+            </closer>
+         </div>
+         <div facs="#p4">
+            <pb/>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,39 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/tei.css">
-  <script src="js/CETEI.js"></script>
-  <script>
-    let c = new CETEI();
-    c.getHTML5('hamlet.xml', function(data) {
-      document.getElementsByTagName("body")[0].appendChild(data);
-    });
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/tei.css">
+    <script src="js/CETEI.js"></script>
+    <script>
+        <!--    hamlet.xml-->
+        // let c = new CETEI();
+        // c.getHTML5('hamlet.xml', function(data) {
+        //   document.getElementsByTagName("body")[0].appendChild(data);
+        // });
+        //
+        // let behaviors = {
+        //   "tei": {
+        //     //head zu <h>
+        //     "head": function(e) {
+        //       let level = document.evaluate("count(ancestor::tei-div)", e, null, XPathResult.NUMBER_TYPE, null);
+        //       let result = document.createElement("h" + level.numberValue);
+        //       for (let n of Array.from(e.childNodes)) {
+        //         result.appendChild(n.cloneNode());
+        //       }
+        //       return result;
+        //     },
+        //     "lb": ["<br>"],
+        //     //"teiHeader": null,
+        //
+        //
+        //   }
+        // };
+        // c.addBehaviors(behaviors);
+<!-- Brief aus VU Digitaler Edition-->
+        let c = new CETEI();
+        c.getHTML5('burckhardt_785.xml', function (data) {
+            document.getElementsByTagName("body")[0].appendChild(data);
+        });
 
-    let behaviors = {
-      "tei": {
-        //head zu <h>
-        "head": function(e) {
-          let level = document.evaluate("count(ancestor::tei-div)", e, null, XPathResult.NUMBER_TYPE, null);
-          let result = document.createElement("h" + level.numberValue);
-          for (let n of Array.from(e.childNodes)) {
-            result.appendChild(n.cloneNode());
-          }
-          return result;
-        },
-        "lb": ["<br>"],
-        //"teiHeader": null,
+        let behaviors = {
+            "tei": {
+                //head zu <h>
+                "head": function (e) {
+                    let level = document.evaluate("count(ancestor::tei-div)", e, null, XPathResult.NUMBER_TYPE, null);
+                    let result = document.createElement("h" + level.numberValue);
+                    for (let n of Array.from(e.childNodes)) {
+                        result.appendChild(n.cloneNode());
+                    }
+                    return result;
+                },
+                "lb": ["<br>"],
+                "standOff": ["<div class='standOff'> <h3>Personen</h3>", "</div>"],
+                "person": ["<div class='person'>", "</div>"],
+                "forename": ["<span class='foreName'>", "</span> "],
+                "genName": ["<span class='genName'>", "</span> "],
+                "roleName": ["<span class='roleName'>", "</span> "],
+                "birth": ["<span class='birth'>Birth: ", "</span>, "],
+                "death": ["<span class='death'>Death: ", "</span>"],
+                "occupation": ["<span class='occupation'> Beruf: ", "</span> "],
+                'idno': ["<a href=\"$rw@type['URI']\">","</a>"], //URL nicht richtig, ID weg
+                "add": ["`","´"],
+                // Supplies two behavior functions. One will run on <supplied reason="lost"> and the
+                // other on <supplied reason="ommitted">.
+                "supplied": [
+                    ["[reason=lost]", ["[","]"]],
+                    ["[reason=omitted]", ["&lt;","&gt;"]]
+                ],
+                "list":["<div class='glossary'> <h3>Glossar</h3>", "</div>"],
+                "item":["<div class='glossary_item'>" , "</div>"],
+                "term":["<span class'list_term>", "</span>:"],
+                "gloss":["<span class'list_term>", "</span>"],
+                "listPlace":["<div class='places'> <h3>Orte</h3>", "</div>"],
+                "place":["<div class='places_item'>" , "</div>"],
+                "listBibl":["<div class='listBibl'> <h3>Erwähnte Literatur</h3>", "</div>"],
+                "bibl":["<div class='bibl_item'>" , "</div>"],
+                "title":["<span class='list_term>", "</span> von "],
+                "author":["<span class='list_term>", "</span>"],
+                "persName": [
+                    ["[ref]", ["<a href=\"$rw@ref\" target=\"_self\">","</a>"]]
+                ],
+                "placeName": [
+                    ["[ref]", ["<a href=\"$rw@ref\" target=\"_self\">","</a>"]]
+                ],
+                "teiHeader":["<div class='header'><h1>Angaben zum Dok</h1>", "</div>"],
+                "title": ["<title>","</title>"],
+                "author": ["<div class='author'>Autor: ", "</div>"],
+                "editor": ["<div class='editor'>bearbeitet in der: ", "</div>"],
+                "respStmt": ["<div class='editor'>", "</div>"],
+                "resp": ["<span class='editor'>", " durch</span"],
+                "name": ["<span class='editor'>", "</span>"],
+                "sourceDesc": ["<div class='source'>", "</div>"],
+                "bibl": ["<span class='source'>Publisher:", "</div>"],
 
 
-      }
-    };
-    c.addBehaviors(behaviors);
+
+            }
+        };
+        c.addBehaviors(behaviors);
 
 
-
-  </script>
+    </script>
 
 </head>
 <body>

@@ -12,6 +12,8 @@ body {
   margin: 0 auto;
   padding: 0 1.5em;
   line-height: 2;
+
+
 }
 
 tei-div {
@@ -91,4 +93,30 @@ tei-speaker:before {
 
 h1 {
   text-align: center;
+}
+
+img {
+  max-width: 800px;
+  height: auto;
+}
+
+tei-salute {
+  font-weight: bolder;
+}
+tei-placename {
+  font-style: italic;
+}
+
+tei-div {
+  text-align: justify;
+}
+
+tei-signed:before{
+  content:"\a";
+  white-space: pre;
+}
+
+tei-address:before{
+  content:"\a";
+  white-space: pre;
 }
