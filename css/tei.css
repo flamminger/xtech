@@ -15,6 +15,22 @@ body {
 
 
 }
+.header .title{
+  text-align: center;
+  margin: 0;
+  padding: 2em;
+  font-size: 1em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bibl_item .title{
+  all: unset;
+}
 
 tei-div {
   display: block;
@@ -96,7 +112,7 @@ h1 {
 }
 
 img {
-  max-width: 800px;
+  max-width: 190px;
   height: auto;
 }
 
@@ -117,6 +133,29 @@ tei-signed:before{
 }
 
 tei-address:before{
+  content:"\a";
+  white-space: pre;
+}
+
+tei-pubplace:before{
+  content:"\a";
+  white-space: pre;
+}
+
+tei-edition:before{
+  content:"\a";
+  white-space: pre;
+}
+
+tei-placename{
+  font-style: normal;
+}
+
+tei-placename:after{
+  content: ":";
+}
+
+.link_ed:after{
   content:"\a";
   white-space: pre;
 }
