@@ -39,15 +39,7 @@
 
         let behaviors = {
             "tei": {
-                //head zu <h>
-                "head": function (e) {
-                    let level = document.evaluate("count(ancestor::tei-div)", e, null, XPathResult.NUMBER_TYPE, null);
-                    let result = document.createElement("h" + level.numberValue);
-                    for (let n of Array.from(e.childNodes)) {
-                        result.appendChild(n.cloneNode());
-                    }
-                    return result;
-                },
+
                 "lb": ["<br>"],
                 "standOff": ["<div class='standOff'> <h3>Personen</h3>", "</div>"],
                 "person": ["<div class='person'>", "</div>"],
