@@ -107,9 +107,7 @@ tei-speaker:before {
 
 }
 
-h1 {
-  text-align: center;
-}
+
 
 img {
   max-width: 190px;
@@ -158,4 +156,13 @@ tei-placename:after{
 .link_ed:after{
   content:"\a";
   white-space: pre;
+}
+
+.header .author {
+  padding-top: 2em;
+  font-weight: bolder;
+}
+
+tei-publisher {
+  font-weight: bolder;
 }

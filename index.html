@@ -66,10 +66,12 @@
                 "pubPlace": function(pub) {
                     let content = document.createElement("a");
                     if (pub.hasAttribute("ref")){
-                        content.setAttribute("class", "link_pub");
-                        content.setAttribute("href", pub.innerHTML);
-                        let text = document.createTextNode("Publisher");
-                        content.appendChild(text);
+                        if (new RegExp(/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/).test(pub.getAttribute("ref"))){
+                            content.setAttribute("class", "link_pub");
+                            content.setAttribute("href", pub.innerHTML);
+                            let text = document.createTextNode("Publisher");
+                            content.appendChild(text);
+                        }
                     }
                     return content;
                 },
